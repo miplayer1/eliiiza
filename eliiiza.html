@@ -25,6 +25,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="style.css" media="screen,projection" />
+    <link rel="stylesheet" href="sms.css" media="screen,projection" />
     <title>Eliiiza</title>
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -44,13 +45,21 @@
   <div class="row black-text center-align ">
     <div id="" class="col s12 m6 offset-m3">
   <div id="" class="neurotoy" >
-    <form name="Eliza" onsubmit="return dialog();">
+    <form name="Eliza">
     <div class="input-field col s12">
       <textarea class="materialize-textarea" style="height:500px;" name="log"></textarea>
     </div>
-    <input id="write-zone" size="50" name="input" value="" type="text" placeholder="Ecrire à Eliza">
-
+    <input id="write-zone" size="50" name="input" value="" type="text" autocomplete="off" placeholder="Ecrire à Eliza">
+    <!-------------------------
+    ---------------------------
+    Bouton pour envoi dans chat
+    ---------------------------
+    ------------------------->
+    <button id="flyer" onclick="return dialog()" class="material-icons blue-text right ">send</button>
+    <!---------------------------
+    --------------------------->
     </form>
+
   </div>
 </div>
 <div>
@@ -61,10 +70,50 @@
 </div> 
 
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/init.js"></script>
+
+<!--<script>
+
+  document.getElementById("flyer").onclick = function(){
+    dialog();
+
+  };
+</script> je peux le mettre dans mon fichier main.js ? 
+
+oui 
+n'impote ou ?
+
+si possible à la fin du ficher -- ok
+
+En même temps, il a tout cassé ^^ Eliza ne me parle plus... c'est triste. ça semble lui envoyer un input vide... il aime pas
+
+faut tester si l'impunt est vide ou non --je ne sais point faire ceci... mais je vais chercher. Peux tu me donner une dernière piste ? Comment je peux mettre en forme les questions et les reponses ? 
+
+
+cad mettre en forme ? avec une couche de css ? Ouiiiiiii
+
+donne moi un idee du rendu css / page web existante 
+
+Oh ben c'est facile, j veux que ça ressemble a un chatbot (enfin pour le moment, c'est l'idée), une conversation sms, truc du genre
+
+https://codepen.io/ezenith/pen/pJLypJ ? 
+Oui, voila. Le css je m'en occupe, c'est comment, à quoi l'appliquer ?
+
+cad ? 
+Et bien j'ai pas de class ou d'id pour y toucher. Comment je les manipule ? Ou j'ai pas compris la logique. Probablement... 
+
+c'est un textaera :( pour le dialogue :( 
+Le code a été créé bien avant le css ^^
+
+cela demande quand meme un plus de taf :( ajouter des div dans une div au lieu d'ajouter du texte dans un textaera  je veux pas denaturer le code, alors on va rester sur de l'hostere (? comment on écrit ?? austère ? ) En fait si, je vais peut être le faire. Si je touche pas au JS trop, c'est dans la philosophie de mon truc. 
+
+:((( J'ai mis onclick dans ma balise html, ça envoi un truc. Mais toujours en double... 
+
+
+
+la suite cette ap ? j'ai dormi 4h cette nuit.... besoin de repos :* Si tu veux rejouer avec moi cette aprem, c'est avec plaisir. Moi non plus, j'ai pas dormi, et mon fils est en train de pleurer parce qu'il veut changer de logiciel de montage mais que la marche est trop haute... Possiblement, je ne survivrai pas à cette journée ^^
+-->
 </body>
 </html>
-

@@ -96,7 +96,7 @@ h2 {
 #centeralign {
 	display: table-cell;
 	vertical-align: middle;
-  padding-top:20vh;
+  padding-top:10vh;
 }
 .eyes {
   color:white;
@@ -122,5 +122,14 @@ width: 95%;
 }
 .materialize-textarea {
     border-bottom: white!important;
+    font-family: 'Roboto Mono', monospace;
 
+}
+#flyer {
+  position:fixed;
+  bottom:20px;
+  left:90%;
+  background-color: transparent;
+  border: none;
+  z-index: 99;
 }

@@ -435,7 +435,7 @@
     response[115]="Continue, précises ta pensée.";
     response[116]="S'il te plaît ne te répètes pas!";
 	 response[117]="Salut c'est un peu familier, je préfère bonjour!";
-	 response[118]="Ne me remercie pas, c'est tout naturel, je ne suis qu'une machine après tout";
+	 response[118]="Merci à toi, d'exister";
 
     loaded = true;			// set the flag as load done
 
@@ -457,11 +457,11 @@
 // Wait function to allow our pieces to get here prior to starting
 
 	function hello(){
-		chatter[chatpoint] = "> Bonjour, Je suis Eliza.";
+		chatter[chatpoint] = "Eliza > Bonjour";
 		chatpoint = 1;
 		return write();
 	}
-	function start(){
+	function start(){7
 		for( i = 0; i < chatmax; i++){ chatter[i] = ""; }
 		chatter[chatpoint] = "  Chargement...";
 		document.Eliza.input.focus();
@@ -483,7 +483,9 @@
 	function dialog(){
 		var Input = document.Eliza.input.value;	  // capture input and copy to log
 		document.Eliza.input.value = "";
-		chatter[chatpoint] = " \n* " + Input;
+   // Input.style.backgroundColor = "black";
+   // document.getElementById('Eliza').style.backgroundColor=blue;
+		chatter[chatpoint] = " \nMoi> " + Input;
 		elizaresponse = listen(Input);
 		setTimeout("think()", 1000 + Math.random()*3000);
 		chatpoint ++ ;
@@ -493,7 +495,7 @@
 	function respond(){
 		chatpoint -- ;
 		if( chatpoint < 0 ){ chatpoint = chatmax-1; }
-		chatter[chatpoint] += "\n- " + elizaresponse;
+		chatter[chatpoint] += "\nEliza> " + elizaresponse;
 		chatpoint ++ ;
 		if( chatpoint >= chatmax ){ chatpoint = 0; }
 		return write();
